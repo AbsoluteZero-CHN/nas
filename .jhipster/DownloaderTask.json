@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "completeTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "changelogDate": "20180923154943",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceClass",
+    "entityTableName": "downloader_task",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "nas"
+}
