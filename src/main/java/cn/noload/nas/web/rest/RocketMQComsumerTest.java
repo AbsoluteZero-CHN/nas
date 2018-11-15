@@ -18,6 +18,7 @@ public class RocketMQComsumerTest {
         consumer.setConsumerGroup("nas");
         consumer.subscribe("transaction", "nas");
         consumer.registerMessageListener((List<MessageExt> list, ConsumeConcurrentlyContext context) -> {
+            list.stream().map(MessageExt::getMsgId).forEach(System.out::println);
             System.out.println("success");
             return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
         });
