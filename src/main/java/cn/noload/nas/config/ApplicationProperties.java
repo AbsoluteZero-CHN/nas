@@ -2,6 +2,8 @@ package cn.noload.nas.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import java.util.List;
+
 /**
  * Properties specific to Nas.
  * <p>
@@ -12,6 +14,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class ApplicationProperties {
 
     private SocksProxy socksProxy;
+
+    private Rocket rocket;
 
     public SocksProxy getSocksProxy() {
         return socksProxy;
@@ -58,5 +62,25 @@ public class ApplicationProperties {
         public void setEncryption(String encryption) {
             this.encryption = encryption;
         }
+    }
+
+    public static class Rocket {
+        private List<String> hosts;
+
+        public List<String> getHosts() {
+            return hosts;
+        }
+
+        public void setHosts(List<String> hosts) {
+            this.hosts = hosts;
+        }
+    }
+
+    public Rocket getRocket() {
+        return rocket;
+    }
+
+    public void setRocket(Rocket rocket) {
+        this.rocket = rocket;
     }
 }
