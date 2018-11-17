@@ -18,7 +18,7 @@ spring:
                 profile-separator: "-"
             discovery:
                 tags: profile=${spring.profiles.active}, version=${info.project.version:}
-                ip-address: 10.0.0.110 # 这里设置当前服务 ip
+                # ip-address: 10.0.0.110 # 这里设置当前服务 ip
                 prefer-ip-address: true
             host: 10.0.0.202
             port: 8500
